@@ -3,7 +3,7 @@ class Song
    @@artists = []
    @@genres = []
    attr_reader :name, :artist, :genre
- 
+
    def initialize(name, artist, genre)
      @name = name
      @artist = artist
@@ -12,11 +12,11 @@ class Song
      @@genres << genre
      @@count += 1
    end
- 
+
    def self.count()
      @@count
    end
- 
+
    def self.artists()
      unique_artists = []
      @@artists.each do |a|
@@ -26,7 +26,7 @@ class Song
     end
     unique_artists
    end
- 
+
    def self.artist_count()
      artist_hash = {}
      @@artists.each do |artist|
@@ -38,7 +38,7 @@ class Song
      end
      artist_hash
    end
- 
+
 
    def self.genres()
      unique_genres = []
@@ -49,7 +49,7 @@ class Song
     end
      unique_genres
    end
- 
+
    def self.genre_count()
      genre_hash = {}
      @@genres.each do |genre|
@@ -61,5 +61,5 @@ class Song
      end
      genre_hash
    end
- 
+
  end
